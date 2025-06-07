@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('stock');
             $table->float('size');
             $table->string('condition');
+            $table->string('img_url');
             $table->timestamps();
         });
     }
