@@ -9,10 +9,8 @@
                 <p class="text-primary-2">{{ $data['category'] }}</p>
                 <p>{{ $data['name'] }}</p>
             </div>
-            <div class="flex justify-between items-end">
-                <p>Rp{{ number_format($data['price'], 0, ',', '.') }}</p>
-                <i class="iconoir-cart text-xl"></i>
-            </div>
+            <p>Rp{{ number_format($data['price'], 0, ',', '.') }}</p>
         </div>
     </a>
+    <a href="" class="iconoir-cart text-xl absolute right-4 bottom-4"></a>
 </div>
