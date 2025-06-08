@@ -50,5 +50,5 @@
 
     <p class="absolute z-50 bottom-40 left-20 text-primary text-4xl">Shop for a Cause:</p>
     <p class="absolute z-50 bottom-[120px] left-20 text-primary text-4xl italic font-semibold">Creativity with a Purpose</p>
-    <a href="/products"><button class="absolute z-50 bottom-12 left-20 h-14 w-60 border border-primary rounded-full text-primary">SHOP THE BEST SELLER</button></a>
+    <a href="#our-products"><button class="absolute z-50 bottom-12 left-20 h-14 w-60 border border-primary rounded-full text-primary">SHOP THE BEST SELLER</button></a>
 </div>

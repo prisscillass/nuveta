@@ -34,7 +34,7 @@
     </div>
 
     <div class="max-w-screen-xl m-auto mt-16 flex flex-col justify-center items-center gap-4">
-        <p class="text-primary-2 text-2xl font-semibold">OUR PRODUCTS</p>
+        <p class="text-primary-2 text-2xl font-semibold" id="our-products">OUR PRODUCTS</p>
 
         {{-- cart items --}}
         <div class="flex justify-between items-center w-full">
