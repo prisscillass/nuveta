@@ -46,8 +46,14 @@
         </div>
     </div>
 
-    <div>
-        <p class="text-primary-2 ">What Are We?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dicta doloremque earum possimus consequuntur laborum, eum odit suscipit beatae, error, fugit a nostrum molestias eius sapiente veniam incidunt odio repudiandae.</p>
+    <div class="flex gap-12 max-w-screen-xl m-auto my-10 mt-20">
+        <img src="assets/page-photo.jpeg" alt="about-us" class="w-[350px] rounded-xl">
+        <div class="flex flex-col justify-center text-justify text-primary-2 ">
+            <p class="font-semibold text-3xl">What Are We?</p>
+            <p class="text-xl italic text-sm/7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
     </div>
+
+
+</div>
 </x-layout>
