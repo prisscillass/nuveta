@@ -16,7 +16,7 @@ class HomeController extends Controller
         }
 
         // ngambil 5 baris data dengan field yang dipilih
-        $products = Product::select('img_url', 'category', 'name', 'price')->limit(5)->get();
+        $products = Product::limit(5)->get();
 
         return view('home-page', compact('products'));
     }
