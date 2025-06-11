@@ -13,9 +13,23 @@
         </a>
 
         <div class="flex gap-x-8">
-            <a href="/profile" class="text-primary text-center text-lg hover:font-bold w-20">Profile</a>
-            <a href="/myorder" class="text-primary text-center text-lg hover:font-bold w-20">My Order</a>
-            <a href="/cart" class="text-primary text-center text-lg hover:font-bold w-20">Cart</a>
+            {{-- if the person is guest then it'll only show login --}}
+            @guest
+                <a href="{{ route('login') }}" class="text-primary text-center text-lg hover:font-bold w-20">Login</a>
+            @endguest
+
+            {{-- if not a guest but a user it'll show the user name --}}
+            @auth
+                <a href="/profile" class="text-primary text-center text-lg hover:font-bold w-20">{{ Auth::user()->name }}</a>
+                <a href="/myorder" class="text-primary text-center text-lg hover:font-bold w-20">My Order</a>
+                <a href="{{ route('cart.index') }}" class="text-primary text-center text-lg hover:font-bold w-20">Cart</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="text-primary text-center text-lg hover:font-bold w-20">
+                        Logout
+                    </button>
+                </form>
+            @endauth
         </div>
     </div>
 </nav>
