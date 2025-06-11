@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index() {
-        if (request()->has('category')) {
+    public function index(Request $request) {
+        if ($request->has('category')) {
             # code...
             $products = Product::where('category', 'like', '%' . request()->get('category', '') . '%')->get();
 
