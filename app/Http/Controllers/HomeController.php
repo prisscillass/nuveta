@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    // query param
     public function index(Request $request) {
         if ($request->has('category')) {
             # code...
