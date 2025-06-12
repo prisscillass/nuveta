@@ -13,5 +13,13 @@
             <p>Rp{{ number_format($product['price'], 0, ',', '.') }}</p>
         </div>
     </a>
-    <a href="" class="iconoir-cart text-xl absolute right-4 bottom-4"></a>
+    <form action="{{ route('cart.store', $product->id) }}" method="POST" class="absolute right-4 bottom-4">
+        @csrf
+        {{-- input untuk save jumlah id product yang di pilih dan qty default nya 1 --}}
+        <input type="hidden" value="{{ $product->id }}" name="buyid">
+        <input type="hidden" value="1" name="buyqty">
+        <button type="submit">
+            <i class="iconoir-cart text-xl"></i>
+        </button>
+    </form>
 </div>
