@@ -20,4 +20,8 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/product/{product}', [ProductController::class, 'show'])->name('product.show');
 
 //  Cart
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/{product}', [CartController::class, 'store'])->name('cart.store');
+    Route::delete('/cart/{cartItem}/delete', [CartController::class, 'destroy'])->name('cart.destroy');
+});
