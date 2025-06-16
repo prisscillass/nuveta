@@ -24,6 +24,7 @@ class CartController extends Controller
         // return view('cart');
         return view('cart', compact('cartItems'));
     }
+
     public function store(Request $request, Product $product)
     {
         $validated = $request->validate([
@@ -64,6 +65,7 @@ class CartController extends Controller
 
         return redirect()->route('home');
     }
+    
     public function destroy(CartItem $cartItem)
     {
         $userId = Auth::user()->id;
