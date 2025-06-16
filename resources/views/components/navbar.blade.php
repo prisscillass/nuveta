@@ -21,7 +21,7 @@
             {{-- if not a guest but a user it'll show the user name --}}
             @auth
             <a href="{{ route('profile.show') }}" class="text-primary text-center text-lg hover:font-bold w-20">{{ Auth::user()->name }}</a>
-            <a href="{{ route('order.index') }}" class="text-primary text-center text-lg hover:font-bold w-20">My Order</a>    
+            <a href="{{ route('transaction.index') }}" class="text-primary text-center text-lg hover:font-bold w-20">My Order</a>    
             <a href="{{ route('cart.index') }}" class="text-primary text-center text-lg hover:font-bold w-20">Cart</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
