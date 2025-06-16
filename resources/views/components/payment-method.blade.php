@@ -33,6 +33,13 @@
                     paymentOptions.forEach(el => el.classList.remove('active'));
                     option.classList.add('active');
                     option.querySelector('input[type="radio"]').checked = true;
+
+                    const selectedMethod = document.querySelector('input[name="payment_method"]:checked').value;
+                    if (selectedMethod === 'bank_transfer') {
+                        document.getElementById('bankOptions').classList.replace('hidden', 'inline-block');
+                    } else {
+                        document.getElementById('bankOptions').classList.replace('inline-block', 'hidden');
+                    }
                 });
             });
         });
@@ -41,7 +48,7 @@
 
 {{-- Pilih Bank --}}
 <!-- dropdown untuk pilih bank -->
-<div class="relative inline-block w-full">
+<div class="relative w-full hidden" id="bankOptions">
     <label class="block font-semibold mb-1">Choose Bank for Payment</label>
 
     <!-- button untuk dropdown -->
