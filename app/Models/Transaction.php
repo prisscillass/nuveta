@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Auth;
 
 class Transaction extends Model
@@ -11,20 +10,14 @@ class Transaction extends Model
     protected $fillable = [
         'user_id',
         'payment_method',
-        'subtotal',
-        'shipping_cost',
         'total',
-        'expediton',
+        'expedition',
         'status',
+        'created_at',
+        'updated_at'
     ];
 
-    public function product(): BelongsTo
-    {
-        return $this->belongsTo(Product::class);
-    }
-
-    public function cartItem(): BelongsTo
-    {
-        return $this->belongsTo(CartItem::class, 'cart_id');
+    public function transactionItem() {
+        return $this->hasMany(TransactionItem::class, 'transaction_id', 'id');
     }
 }
