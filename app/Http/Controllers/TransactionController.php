@@ -82,6 +82,7 @@ class TransactionController extends Controller
         
         // hitung total dari barang di checkout
         $subtotal = 0;
+        // dd($checkoutedItemsSession);
         foreach ($checkoutedItemsSession as $item) {
             $productId = $item['product_id'];
             $buyqty = $item['buyqty'];

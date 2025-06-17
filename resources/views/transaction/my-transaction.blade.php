@@ -84,7 +84,11 @@
 
                             <div class="flex justify-between pt-4 font-bold">
                                 <span>Total</span>
-                                <span>Rp{{ number_format($totalPrice, 0) }}</span>
+                                {{-- @dd($item);
+                                @php
+                                    $totalAll = $item->product->price * $item->transaction_quantity;
+                                @endphp --}}
+                                <span>Rp{{ number_format($transaction->total, 0) }}</span>
                             </div>
                         </div>
                     </div>
